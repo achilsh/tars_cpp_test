@@ -1,0 +1,21 @@
+
+module Test
+{
+
+struct backendReq {
+	1 require string a;
+	2 optional int b;
+};
+
+struct backendResp {
+	1 require int code;
+	2 optional string msg;
+};
+
+interface HelloWorldBackend
+{
+    int test();
+    int backend_test(backendReq req, out backendResp resp);
+};
+
+}; 

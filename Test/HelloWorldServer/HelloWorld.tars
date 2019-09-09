@@ -1,0 +1,23 @@
+
+module Test
+{
+
+struct test_req {
+	1 require int a;
+	2 optional string str_b;
+};
+struct test_resp {
+	1 require int code;
+	2 optional string msg;
+};
+
+
+interface HelloWorld
+{
+    int test();
+	int my_test(test_req in_param, out test_resp out_ret);
+	int my_promise_test(test_req in_param, out test_resp out_ret);
+	int my_serial_promise_test(test_req in_param, out test_resp out_ret);
+};
+
+}; 

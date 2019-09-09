@@ -1,0 +1,22 @@
+
+module Test
+{
+
+struct SecondReq {
+	1 require int i_a;
+	2 optional string str_b;
+};
+
+struct SecondResp {
+
+	1 require int code;
+	2 optional string msg;
+};
+
+interface HelloWorldBckendSecond
+{
+    int test();
+    int test_second(SecondReq req, out SecondResp resp);
+};
+
+}; 
